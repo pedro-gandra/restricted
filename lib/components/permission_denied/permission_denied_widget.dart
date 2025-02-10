@@ -45,6 +45,9 @@ class _PermissionDeniedWidgetState extends State<PermissionDeniedWidget> {
           Align(
             alignment: const AlignmentDirectional(0.0, 0.0),
             child: Container(
+              constraints: const BoxConstraints(
+                maxWidth: 400.0,
+              ),
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).alternate,
                 boxShadow: const [
