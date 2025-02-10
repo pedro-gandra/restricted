@@ -32,7 +32,11 @@ class _InitialWidgetState extends State<InitialWidget> {
           context.goNamed('signUp');
         }
       } else {
-        context.goNamed('HomePage');
+        if (FFAppState().numberReached) {
+          context.goNamed('phoneNumber');
+        } else {
+          context.goNamed('HomePage');
+        }
       }
     });
   }

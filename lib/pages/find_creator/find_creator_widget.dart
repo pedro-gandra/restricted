@@ -1,3 +1,4 @@
+import '/components/john_doe/john_doe_widget.dart';
 import '/components/sofia_dulac/sofia_dulac_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -203,6 +204,8 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                         }
                                         if (functions.isSofia(
                                             _model.textController.text)) {
+                                          _model.noCreator = false;
+                                          safeSetState(() {});
                                           await showDialog(
                                             context: context,
                                             builder: (dialogContext) {
@@ -229,8 +232,39 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                             },
                                           );
                                         } else {
-                                          if (!functions.isJohn(
+                                          if (functions.isJohn(
                                               _model.textController.text)) {
+                                            _model.noCreator = false;
+                                            safeSetState(() {});
+                                            await showDialog(
+                                              context: context,
+                                              builder: (dialogContext) {
+                                                return Dialog(
+                                                  elevation: 0,
+                                                  insetPadding: EdgeInsets.zero,
+                                                  backgroundColor:
+                                                      Colors.transparent,
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                              0.0, 0.0)
+                                                          .resolve(
+                                                              Directionality.of(
+                                                                  context)),
+                                                  child: GestureDetector(
+                                                    onTap: () {
+                                                      FocusScope.of(
+                                                              dialogContext)
+                                                          .unfocus();
+                                                      FocusManager
+                                                          .instance.primaryFocus
+                                                          ?.unfocus();
+                                                    },
+                                                    child: const JohnDoeWidget(),
+                                                  ),
+                                                );
+                                              },
+                                            );
+                                          } else {
                                             _model.noCreator = true;
                                             safeSetState(() {});
                                           }
