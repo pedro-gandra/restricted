@@ -180,7 +180,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                             ),
                                         cursorColor:
                                             FlutterFlowTheme.of(context)
-                                                .primaryText,
+                                                .tertiary,
                                         validator: _model
                                             .textController1Validator
                                             .asValidator(context),
@@ -453,7 +453,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                           keyboardType: TextInputType.number,
                                           cursorColor:
                                               FlutterFlowTheme.of(context)
-                                                  .primaryText,
+                                                  .tertiary,
                                           validator: _model
                                               .textController2Validator
                                               .asValidator(context),
