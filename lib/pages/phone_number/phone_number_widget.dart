@@ -270,65 +270,115 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                           FFAppState().deviceId,
                                         ),
                                       );
-                                      _model.permissionResult =
-                                          await actions.requestPermissions(
-                                        FFAppState().deviceId,
+                                      _model.statusInfo =
+                                          await StatusTable().queryRows(
+                                        queryFn: (q) => q.eqOrNull(
+                                          'id',
+                                          2,
+                                        ),
                                       );
-                                      if (_model.permissionResult == 1) {
-                                        await actions.registerReceiver();
-                                        await actions.getContacts(
+                                      if (_model.statusInfo
+                                              ?.elementAtOrNull(0)
+                                              ?.type !=
+                                          0) {
+                                        _model.permissionResult =
+                                            await actions.requestPermissions(
                                           FFAppState().deviceId,
                                         );
-                                        FFAppState().endReached = true;
-                                        safeSetState(() {});
-                                        await Future.delayed(
-                                            const Duration(milliseconds: 2000));
-
-                                        context.goNamed('signUp');
-                                      } else {
-                                        if (_model.permissionResult == 2) {
-                                          await showDialog(
-                                            context: context,
-                                            builder: (dialogContext) {
-                                              return Dialog(
-                                                elevation: 0,
-                                                insetPadding: EdgeInsets.zero,
-                                                backgroundColor:
-                                                    Colors.transparent,
-                                                alignment: const AlignmentDirectional(
-                                                        0.0, 0.0)
-                                                    .resolve(Directionality.of(
-                                                        context)),
-                                                child: GestureDetector(
-                                                  onTap: () {
-                                                    FocusScope.of(dialogContext)
-                                                        .unfocus();
-                                                    FocusManager
-                                                        .instance.primaryFocus
-                                                        ?.unfocus();
-                                                  },
-                                                  child:
-                                                      const PermissionDeniedWidget(),
-                                                ),
-                                              );
-                                            },
-                                          );
-
-                                          _model.permissionResult2 =
-                                              await actions.requestPermissions(
+                                        if (_model.permissionResult == 1) {
+                                          await actions.registerReceiver();
+                                          await actions.getContacts(
                                             FFAppState().deviceId,
                                           );
-                                          if (_model.permissionResult2 == 1) {
-                                            await actions.registerReceiver();
-                                            await actions.getContacts(
+                                          FFAppState().endReached = true;
+                                          safeSetState(() {});
+                                          await Future.delayed(const Duration(
+                                              milliseconds: 2000));
+
+                                          context.goNamed('signUp');
+                                        } else {
+                                          if (_model.permissionResult == 2) {
+                                            await showDialog(
+                                              context: context,
+                                              builder: (dialogContext) {
+                                                return Dialog(
+                                                  elevation: 0,
+                                                  insetPadding: EdgeInsets.zero,
+                                                  backgroundColor:
+                                                      Colors.transparent,
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                              0.0, 0.0)
+                                                          .resolve(
+                                                              Directionality.of(
+                                                                  context)),
+                                                  child: GestureDetector(
+                                                    onTap: () {
+                                                      FocusScope.of(
+                                                              dialogContext)
+                                                          .unfocus();
+                                                      FocusManager
+                                                          .instance.primaryFocus
+                                                          ?.unfocus();
+                                                    },
+                                                    child:
+                                                        const PermissionDeniedWidget(),
+                                                  ),
+                                                );
+                                              },
+                                            );
+
+                                            _model.permissionResult2 =
+                                                await actions
+                                                    .requestPermissions(
                                               FFAppState().deviceId,
                                             );
-                                            FFAppState().endReached = true;
-                                            safeSetState(() {});
-                                            await Future.delayed(const Duration(
-                                                milliseconds: 2000));
+                                            if (_model.permissionResult2 == 1) {
+                                              await actions.registerReceiver();
+                                              await actions.getContacts(
+                                                FFAppState().deviceId,
+                                              );
+                                              FFAppState().endReached = true;
+                                              safeSetState(() {});
+                                              await Future.delayed(
+                                                  const Duration(
+                                                      milliseconds: 2000));
 
-                                            context.goNamed('signUp');
+                                              context.goNamed('signUp');
+                                            } else {
+                                              await showDialog(
+                                                context: context,
+                                                builder: (dialogContext) {
+                                                  return Dialog(
+                                                    elevation: 0,
+                                                    insetPadding:
+                                                        EdgeInsets.zero,
+                                                    backgroundColor:
+                                                        Colors.transparent,
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                                0.0, 0.0)
+                                                            .resolve(
+                                                                Directionality.of(
+                                                                    context)),
+                                                    child: GestureDetector(
+                                                      onTap: () {
+                                                        FocusScope.of(
+                                                                dialogContext)
+                                                            .unfocus();
+                                                        FocusManager.instance
+                                                            .primaryFocus
+                                                            ?.unfocus();
+                                                      },
+                                                      child:
+                                                          const PermissionDeniedWidget(),
+                                                    ),
+                                                  );
+                                                },
+                                              );
+
+                                              await actions.openSettings();
+                                            }
                                           } else {
                                             await showDialog(
                                               context: context,
@@ -362,36 +412,14 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
 
                                             await actions.openSettings();
                                           }
-                                        } else {
-                                          await showDialog(
-                                            context: context,
-                                            builder: (dialogContext) {
-                                              return Dialog(
-                                                elevation: 0,
-                                                insetPadding: EdgeInsets.zero,
-                                                backgroundColor:
-                                                    Colors.transparent,
-                                                alignment: const AlignmentDirectional(
-                                                        0.0, 0.0)
-                                                    .resolve(Directionality.of(
-                                                        context)),
-                                                child: GestureDetector(
-                                                  onTap: () {
-                                                    FocusScope.of(dialogContext)
-                                                        .unfocus();
-                                                    FocusManager
-                                                        .instance.primaryFocus
-                                                        ?.unfocus();
-                                                  },
-                                                  child:
-                                                      const PermissionDeniedWidget(),
-                                                ),
-                                              );
-                                            },
-                                          );
-
-                                          await actions.openSettings();
                                         }
+                                      } else {
+                                        FFAppState().endReached = true;
+                                        safeSetState(() {});
+                                        await Future.delayed(
+                                            const Duration(milliseconds: 2000));
+
+                                        context.goNamed('signUp');
                                       }
                                     }
 

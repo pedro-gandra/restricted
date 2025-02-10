@@ -39,3 +39,8 @@ String calculateCountdown(DateTime available) {
 String clearPhoneNumber(String str) {
   return str.replaceAll(RegExp(r'[^+\d]'), '');
 }
+
+bool isJohn(String str) {
+  if (str.contains("john") || str.contains("jon")) return true;
+  return false;
+}
