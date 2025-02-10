@@ -229,8 +229,11 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                             },
                                           );
                                         } else {
-                                          _model.noCreator = true;
-                                          safeSetState(() {});
+                                          if (!functions.isJohn(
+                                              _model.textController.text)) {
+                                            _model.noCreator = true;
+                                            safeSetState(() {});
+                                          }
                                         }
                                       },
                                       child: Icon(
