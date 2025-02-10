@@ -50,7 +50,7 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
           Align(
             alignment: const AlignmentDirectional(0.0, 0.0),
             child: Container(
-              width: 270.0,
+              width: 290.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).alternate,
                 borderRadius: BorderRadius.circular(24.0),
