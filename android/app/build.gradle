@@ -2,8 +2,25 @@ plugins {
    id "com.android.application"
    id "kotlin-android"
    id "dev.flutter.flutter-gradle-plugin"
-   
-   
+    id "org.jetbrains.kotlin.plugin.serialization"
+}
+
+android {
+    buildTypes {
+        release {
+            minifyEnabled true // Enables ProGuard for release builds
+            shrinkResources true // Removes unused resources
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'flutter_proguard_rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 def localProperties = new Properties()
@@ -32,6 +49,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     compileSdkVersion 34
+    namespace "com.nemesis.restricted"
     
 
     sourceSets {
@@ -75,5 +93,10 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10"
+    implementation("io.ktor:ktor-client-okhttp:3.0.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+    implementation(platform("io.github.jan-tennert.supabase:bom:3.0.2"))
+    implementation("io.github.jan-tennert.supabase:postgrest-kt")
+    implementation("io.github.jan-tennert.supabase:storage-kt")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.0.21")
 }
