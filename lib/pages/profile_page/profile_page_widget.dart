@@ -91,6 +91,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 35.0, 0.0, 0.0),
                                 child: Container(
+                                  constraints: const BoxConstraints(
+                                    maxWidth: 500.0,
+                                  ),
                                   decoration: BoxDecoration(
                                     color:
                                         FlutterFlowTheme.of(context).alternate,
@@ -132,6 +135,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 35.0, 0.0, 0.0),
                                   child: Container(
+                                    constraints: const BoxConstraints(
+                                      maxWidth: 500.0,
+                                    ),
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .alternate,
@@ -263,7 +269,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .tertiary,
-                                                  fontSize: 14.0,
+                                                  fontSize: 15.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
                                                   lineHeight: 1.4,
