@@ -39,6 +39,9 @@ class FFAppState extends ChangeNotifier {
           ? DateTime.fromMillisecondsSinceEpoch(prefs.getInt('ff_available')!)
           : _available;
     });
+    _safeInit(() {
+      _isJohn = prefs.getBool('ff_isJohn') ?? _isJohn;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -103,6 +106,13 @@ class FFAppState extends ChangeNotifier {
     value != null
         ? prefs.setInt('ff_available', value.millisecondsSinceEpoch)
         : prefs.remove('ff_available');
+  }
+
+  bool _isJohn = false;
+  bool get isJohn => _isJohn;
+  set isJohn(bool value) {
+    _isJohn = value;
+    prefs.setBool('ff_isJohn', value);
   }
 }
 

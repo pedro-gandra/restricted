@@ -1,3 +1,4 @@
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'phone_number_widget.dart' show PhoneNumberWidget;
 import 'package:flutter/material.dart';
@@ -21,6 +22,8 @@ class PhoneNumberModel extends FlutterFlowModel<PhoneNumberWidget> {
     return null;
   }
 
+  // Stores action output result for [Backend Call - Query Rows] action in Button widget.
+  List<StatusRow>? statusInfo;
   // Stores action output result for [Custom Action - requestPermissions] action in Button widget.
   int? permissionResult;
   // Stores action output result for [Custom Action - requestPermissions] action in Button widget.
