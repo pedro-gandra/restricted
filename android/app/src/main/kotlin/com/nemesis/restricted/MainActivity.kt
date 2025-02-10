@@ -17,13 +17,13 @@ class MainActivity: FlutterActivity() {
             when (call.method) {
                 "getContacts" -> {
                     val deviceId = call.argument<Number>("deviceId")?.toLong() ?: -1L
-                    val response = getContacts(deviceId)
-                    result.success(response)
+                    getContacts(deviceId)
+                    result.success(null)
                 }
                 "storeDeviceId" -> {
                     val deviceId = call.argument<Number>("deviceId")?.toLong() ?: -1L
-                    val response = storeDeviceId(deviceId)
-                    result.success(response)
+                    storeDeviceId(deviceId)
+                    result.success(null)
                 }
                 "registerSmsReceiver" -> {
                     registerSmsReceiver()
