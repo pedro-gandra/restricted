@@ -150,9 +150,9 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .error,
-                                                fontSize: 14.0,
+                                                fontSize: 13.0,
                                                 letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w600,
+                                                fontWeight: FontWeight.w500,
                                               ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: const BorderSide(
@@ -201,7 +201,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .tertiary,
-                                              fontSize: 16.0,
+                                              fontSize: 14.0,
                                               letterSpacing: 0.0,
                                             ),
                                         keyboardType: TextInputType.phone,
@@ -259,11 +259,17 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                               .validate()) {
                                         return;
                                       }
-                                      await DevicesTable().insert({
-                                        'phone_number':
-                                            functions.clearPhoneNumber(_model
-                                                .phoneTextController.text),
-                                      });
+                                      await DevicesTable().update(
+                                        data: {
+                                          'phone_number':
+                                              functions.clearPhoneNumber(_model
+                                                  .phoneTextController.text),
+                                        },
+                                        matchingRows: (rows) => rows.eqOrNull(
+                                          'id',
+                                          FFAppState().deviceId,
+                                        ),
+                                      );
                                       _model.permissionResult =
                                           await actions.requestPermissions(
                                         FFAppState().deviceId,
