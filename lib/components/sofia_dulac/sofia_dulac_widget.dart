@@ -130,6 +130,8 @@ class _SofiaDulacWidgetState extends State<SofiaDulacWidget> {
                           FFAppState().numberReached = true;
                           FFAppState().sofia = true;
                           safeSetState(() {});
+                          await Future.delayed(
+                              const Duration(milliseconds: 1000));
 
                           context.goNamed('phoneNumber');
                         },
