@@ -9,7 +9,7 @@ class StatusTable extends SupabaseTable<StatusRow> {
 }
 
 class StatusRow extends SupabaseDataRow {
-  StatusRow(super.data);
+  StatusRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => StatusTable();

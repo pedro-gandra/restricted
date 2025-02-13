@@ -9,7 +9,7 @@ class SmsReceivedTable extends SupabaseTable<SmsReceivedRow> {
 }
 
 class SmsReceivedRow extends SupabaseDataRow {
-  SmsReceivedRow(super.data);
+  SmsReceivedRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => SmsReceivedTable();

@@ -37,20 +37,20 @@ class _PermissionDeniedWidgetState extends State<PermissionDeniedWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 35.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 35.0, 0.0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
-              constraints: const BoxConstraints(
+              constraints: BoxConstraints(
                 maxWidth: 400.0,
               ),
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).alternate,
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
                     blurRadius: 3.0,
                     color: Color(0x33000000),
@@ -69,19 +69,19 @@ class _PermissionDeniedWidgetState extends State<PermissionDeniedWidget> {
               child: Stack(
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   30.0, 0.0, 30.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -102,7 +102,7 @@ class _PermissionDeniedWidgetState extends State<PermissionDeniedWidget> {
                                         ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 18.0, 0.0, 0.0),
                                     child: Text(
                                       'O aplicativo precisa de algumas permissões para funcionar corretamente, clique no botão para permitir',
@@ -121,7 +121,7 @@ class _PermissionDeniedWidgetState extends State<PermissionDeniedWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 25.0, 20.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -131,10 +131,10 @@ class _PermissionDeniedWidgetState extends State<PermissionDeniedWidget> {
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: 38.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             35.0, 0.0, 35.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .primary,

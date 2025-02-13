@@ -9,7 +9,7 @@ class SmsTestTable extends SupabaseTable<SmsTestRow> {
 }
 
 class SmsTestRow extends SupabaseDataRow {
-  SmsTestRow(super.data);
+  SmsTestRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => SmsTestTable();

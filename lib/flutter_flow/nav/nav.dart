@@ -43,7 +43,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : const InitialWidget(),
+          : InitialWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -58,37 +58,37 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : const InitialWidget(),
+              : InitialWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
           name: 'findCreator',
           path: '/findCreator',
-          builder: (context, params) => const FindCreatorWidget(),
+          builder: (context, params) => FindCreatorWidget(),
         ),
         FFRoute(
           name: 'phoneNumber',
           path: '/phoneNumber',
-          builder: (context, params) => const PhoneNumberWidget(),
+          builder: (context, params) => PhoneNumberWidget(),
         ),
         FFRoute(
           name: 'signUp',
           path: '/signUp',
-          builder: (context, params) => const SignUpWidget(),
+          builder: (context, params) => SignUpWidget(),
         ),
         FFRoute(
           name: 'initial',
           path: '/initial',
-          builder: (context, params) => const InitialWidget(),
+          builder: (context, params) => InitialWidget(),
         ),
         FFRoute(
           name: 'profilePage',
           path: '/profilePage',
-          builder: (context, params) => const ProfilePageWidget(),
+          builder: (context, params) => ProfilePageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -252,7 +252,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

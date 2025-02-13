@@ -59,11 +59,11 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                   child: Container(
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 500.0,
                     ),
                     decoration: BoxDecoration(
@@ -71,7 +71,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           30.0, 40.0, 30.0, 40.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -96,7 +96,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                             key: _model.formKey,
                             autovalidateMode: AutovalidateMode.disabled,
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 25.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -112,7 +112,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                         ),
                                   ),
                                   Expanded(
-                                    child: SizedBox(
+                                    child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller: _model.phoneTextController,
@@ -155,7 +155,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                 fontWeight: FontWeight.w500,
                                               ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0x00000000),
                                               width: 1.0,
                                             ),
@@ -163,7 +163,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0x00000000),
                                               width: 1.0,
                                             ),
@@ -192,7 +192,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           filled: true,
-                                          fillColor: const Color(0xFFE3E3E3),
+                                          fillColor: Color(0xFFE3E3E3),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -214,7 +214,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 15.0)),
+                                ].divide(SizedBox(width: 15.0)),
                               ),
                             ),
                           ),
@@ -222,7 +222,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                             opacity: 0.9,
                             child: Builder(
                               builder: (context) => Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 25.0, 20.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -233,7 +233,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: const AlignmentDirectional(
+                                          alignment: AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -307,7 +307,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                   backgroundColor:
                                                       Colors.transparent,
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                               0.0, 0.0)
                                                           .resolve(
                                                               Directionality.of(
@@ -322,7 +322,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                           ?.unfocus();
                                                     },
                                                     child:
-                                                        const PermissionDeniedWidget(),
+                                                        PermissionDeniedWidget(),
                                                   ),
                                                 );
                                               },
@@ -356,7 +356,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                     backgroundColor:
                                                         Colors.transparent,
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                                 0.0, 0.0)
                                                             .resolve(
                                                                 Directionality.of(
@@ -371,7 +371,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                             ?.unfocus();
                                                       },
                                                       child:
-                                                          const PermissionDeniedWidget(),
+                                                          PermissionDeniedWidget(),
                                                     ),
                                                   );
                                                 },
@@ -389,7 +389,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                   backgroundColor:
                                                       Colors.transparent,
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                               0.0, 0.0)
                                                           .resolve(
                                                               Directionality.of(
@@ -404,7 +404,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                                           ?.unfocus();
                                                     },
                                                     child:
-                                                        const PermissionDeniedWidget(),
+                                                        PermissionDeniedWidget(),
                                                   ),
                                                 );
                                               },
@@ -429,9 +429,9 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                                   options: FFButtonOptions(
                                     width: double.infinity,
                                     height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -452,7 +452,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Text(
                               'Para prosseguir crie uma conta utilizando seu número de telefone',
