@@ -48,19 +48,8 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.nemesis.restricted"
     compileSdkVersion 34
     namespace "com.nemesis.restricted"
-    
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
-    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -94,7 +83,6 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
