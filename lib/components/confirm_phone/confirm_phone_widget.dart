@@ -42,13 +42,13 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 35.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 35.0, 0.0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
               width: 290.0,
               decoration: BoxDecoration(
@@ -56,7 +56,7 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                 borderRadius: BorderRadius.circular(24.0),
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 30.0),
+                padding: EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 30.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -71,7 +71,7 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                       child: Text(
                         valueOrDefault<String>(
                           widget.phone,
@@ -88,7 +88,7 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                       child: Text(
                         'Você terá que verificar o seu número',
                         textAlign: TextAlign.center,
@@ -102,7 +102,7 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -115,9 +115,9 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                               options: FFButtonOptions(
                                 width: double.infinity,
                                 height: 35.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).alternate,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -150,9 +150,9 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                               options: FFButtonOptions(
                                 width: double.infinity,
                                 height: 35.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -169,7 +169,7 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                               ),
                             ),
                           ),
-                        ].divide(const SizedBox(width: 20.0)),
+                        ].divide(SizedBox(width: 20.0)),
                       ),
                     ),
                   ],

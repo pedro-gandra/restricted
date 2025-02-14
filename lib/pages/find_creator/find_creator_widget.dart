@@ -52,11 +52,11 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                   child: Container(
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 500.0,
                     ),
                     decoration: BoxDecoration(
@@ -64,7 +64,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           35.0, 40.0, 35.0, 40.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -89,7 +89,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                             key: _model.formKey,
                             autovalidateMode: AutovalidateMode.disabled,
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -136,7 +136,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                               fontWeight: FontWeight.w500,
                                             ),
                                         enabledBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -144,7 +144,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                               BorderRadius.circular(18.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -170,9 +170,9 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                               BorderRadius.circular(18.0),
                                         ),
                                         filled: true,
-                                        fillColor: const Color(0xFFE3E3E3),
+                                        fillColor: Color(0xFFE3E3E3),
                                         contentPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 15.0, 0.0, 0.0, 0.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -214,7 +214,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                                 insetPadding: EdgeInsets.zero,
                                                 backgroundColor:
                                                     Colors.transparent,
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                         0.0, 0.0)
                                                     .resolve(Directionality.of(
                                                         context)),
@@ -226,7 +226,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                                         .instance.primaryFocus
                                                         ?.unfocus();
                                                   },
-                                                  child: const SofiaDulacWidget(),
+                                                  child: SofiaDulacWidget(),
                                                 ),
                                               );
                                             },
@@ -245,7 +245,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                                   backgroundColor:
                                                       Colors.transparent,
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                               0.0, 0.0)
                                                           .resolve(
                                                               Directionality.of(
@@ -259,7 +259,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                                           .instance.primaryFocus
                                                           ?.unfocus();
                                                     },
-                                                    child: const JohnDoeWidget(),
+                                                    child: JohnDoeWidget(),
                                                   ),
                                                 );
                                               },
@@ -278,13 +278,13 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 15.0)),
+                                ].divide(SizedBox(width: 15.0)),
                               ),
                             ),
                           ),
                           if (_model.noCreator)
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: Text(
                                 'Nenhum criador encontrado',
@@ -301,7 +301,7 @@ class _FindCreatorWidgetState extends State<FindCreatorWidget> {
                               ),
                             ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 25.0, 0.0, 0.0),
                             child: Text(
                               'Pesquise pelo nome ou codigo de usuário',

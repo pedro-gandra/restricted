@@ -11,6 +11,7 @@ import 'uploaded_file.dart';
 import '/backend/supabase/supabase.dart';
 
 bool isSofia(String str) {
+  str = str.toLowerCase();
   if (str.contains("sofia") ||
       str.contains("sophia") ||
       str.contains("soso") ||
@@ -41,6 +42,7 @@ String clearPhoneNumber(String str) {
 }
 
 bool isJohn(String str) {
+  str = str.toLowerCase();
   if (str.contains("john") || str.contains("jon")) return true;
   return false;
 }

@@ -71,10 +71,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(45.0, 0.0, 45.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(45.0, 0.0, 45.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -94,7 +94,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Text(
                               'Acesse conteúdos exclusivos dos seus criadores favoritos de forma gratuita',
@@ -114,7 +114,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           Opacity(
                             opacity: 0.9,
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 25.0, 0.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -125,7 +125,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   context.pushNamed('findCreator');
                                 },
                                 child: Container(
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     maxWidth: 300.0,
                                   ),
                                   decoration: BoxDecoration(
@@ -134,7 +134,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     borderRadius: BorderRadius.circular(16.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 15.0, 15.0, 15.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -154,13 +154,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFF121212),
+                                                color: Color(0xFF121212),
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(width: 20.0)),
+                                      ].divide(SizedBox(width: 20.0)),
                                     ),
                                   ),
                                 ),
@@ -174,11 +174,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 ],
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                   child: Container(
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(

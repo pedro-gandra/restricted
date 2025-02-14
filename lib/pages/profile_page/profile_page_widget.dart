@@ -62,13 +62,13 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 70.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 70.0),
                   child: Stack(
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 35.0, 30.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -88,10 +88,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 35.0, 0.0, 0.0),
                                 child: Container(
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     maxWidth: 500.0,
                                   ),
                                   decoration: BoxDecoration(
@@ -100,7 +100,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     borderRadius: BorderRadius.circular(25.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 15.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -125,17 +125,17 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(width: 18.0)),
+                                      ].divide(SizedBox(width: 18.0)),
                                     ),
                                   ),
                                 ),
                               ),
                               if (FFAppState().sofia)
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 35.0, 0.0, 0.0),
                                   child: Container(
-                                    constraints: const BoxConstraints(
+                                    constraints: BoxConstraints(
                                       maxWidth: 500.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -144,7 +144,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           25.0, 30.0, 25.0, 30.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -159,9 +159,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     BorderRadius.circular(8.0),
                                                 child: CachedNetworkImage(
                                                   fadeInDuration:
-                                                      const Duration(milliseconds: 0),
+                                                      Duration(milliseconds: 0),
                                                   fadeOutDuration:
-                                                      const Duration(milliseconds: 0),
+                                                      Duration(milliseconds: 0),
                                                   imageUrl:
                                                       'https://mfmdywuxtclmgzjypylq.supabase.co/storage/v1/object/public/ladies/sofia/profile.jpg',
                                                   width: 80.0,
@@ -222,13 +222,13 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                               FontWeight.normal,
                                                         ),
                                                   ),
-                                                ].divide(const SizedBox(height: 5.0)),
+                                                ].divide(SizedBox(height: 5.0)),
                                               ),
-                                            ].divide(const SizedBox(width: 20.0)),
+                                            ].divide(SizedBox(width: 20.0)),
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 25.0, 0.0, 0.0),
                                             child: Text(
                                               'Prévias',
@@ -251,9 +251,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 BorderRadius.circular(0.0),
                                             child: CachedNetworkImage(
                                               fadeInDuration:
-                                                  const Duration(milliseconds: 0),
+                                                  Duration(milliseconds: 0),
                                               fadeOutDuration:
-                                                  const Duration(milliseconds: 0),
+                                                  Duration(milliseconds: 0),
                                               imageUrl:
                                                   'https://mfmdywuxtclmgzjypylq.supabase.co/storage/v1/object/public/ladies/sofia/previas.png',
                                               fit: BoxFit.cover,
@@ -277,7 +277,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 0.0),
                                             child: Text(
                                               '47 fotos exclusivas de Sofia ficarão disponíveis gratuitamente em:',
@@ -301,7 +301,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 0.0),
                                             child: Text(
                                               valueOrDefault<String>(
@@ -331,10 +331,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 ),
                               if (FFAppState().isJohn)
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 35.0, 0.0, 0.0),
                                   child: Container(
-                                    constraints: const BoxConstraints(
+                                    constraints: BoxConstraints(
                                       maxWidth: 500.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -343,7 +343,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           25.0, 30.0, 25.0, 30.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -358,9 +358,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     BorderRadius.circular(8.0),
                                                 child: CachedNetworkImage(
                                                   fadeInDuration:
-                                                      const Duration(milliseconds: 0),
+                                                      Duration(milliseconds: 0),
                                                   fadeOutDuration:
-                                                      const Duration(milliseconds: 0),
+                                                      Duration(milliseconds: 0),
                                                   imageUrl:
                                                       'https://mfmdywuxtclmgzjypylq.supabase.co/storage/v1/object/public/ladies/test/sallum.jpeg',
                                                   width: 80.0,
@@ -421,13 +421,13 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                               FontWeight.normal,
                                                         ),
                                                   ),
-                                                ].divide(const SizedBox(height: 5.0)),
+                                                ].divide(SizedBox(height: 5.0)),
                                               ),
-                                            ].divide(const SizedBox(width: 20.0)),
+                                            ].divide(SizedBox(width: 20.0)),
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 25.0, 0.0, 0.0),
                                             child: Text(
                                               'Prévias',
@@ -447,19 +447,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 20.0),
                                             child: Container(
                                               width: double.infinity,
                                               height: 200.0,
-                                              decoration: const BoxDecoration(
+                                              decoration: BoxDecoration(
                                                 color: Color(0xFFD2D2D2),
                                               ),
                                               child: Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           30.0, 0.0, 30.0, 0.0),
                                                   child: Text(
@@ -499,7 +499,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 0.0),
                                             child: Text(
                                               '12 fotos exclusivas de Sofia ficarão disponíveis gratuitamente em:',
@@ -523,7 +523,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 0.0),
                                             child: Text(
                                               valueOrDefault<String>(

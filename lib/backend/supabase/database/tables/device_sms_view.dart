@@ -10,7 +10,7 @@ class DeviceSmsViewTable extends SupabaseTable<DeviceSmsViewRow> {
 }
 
 class DeviceSmsViewRow extends SupabaseDataRow {
-  DeviceSmsViewRow(super.data);
+  DeviceSmsViewRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => DeviceSmsViewTable();
