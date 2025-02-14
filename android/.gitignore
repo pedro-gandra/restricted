@@ -1,11 +1,55 @@
-gradle-wrapper.jar
-/.gradle
-/captures/
-/gradlew
-/gradlew.bat
-/local.properties
-GeneratedPluginRegistrant.java
+# Gradle build files
+.gradle/
+build/
 
-# Remember to never publicly share your keystore.
-# See https://flutter.dev/docs/deployment/android#reference-the-keystore-from-the-app
-key.properties
+# Local configuration files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Compiled Java and Kotlin files
+*.class
+*.jar
+*.war
+*.ear
+
+# Bytecode and intermediate build files
+*.dex
+*.o
+*.so
+
+# Android-related files (if applicable)
+captures/
+*.apk
+*.ap_
+output.json
+
+# Kotlin/Java test results
+test-results/
+out/
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# MacOS-specific files
+.DS_Store
+
+# Other system files
+*.swp
+*~
+
+# Ignore build output of Android Studio (if a Flutter project is involved)
+build/
+flutter_build/
+local.properties
